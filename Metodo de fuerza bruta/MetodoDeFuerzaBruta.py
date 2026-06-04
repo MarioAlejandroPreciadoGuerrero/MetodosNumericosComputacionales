@@ -1,16 +1,6 @@
 import math as m
-"""Metodo de fuerza bruta para resolver ecuaciones
 
-1. El usuario ingresa el intervalo de busqueda (xi, xf) y el incremento (incx)
-2. El usuario elige la ecuacion a resolver (1 o 2)
-3. Se tabula la ecuacion con los valores de x e y
-4. Se imprime la tabla de valores
-    Ecuaciones a resolver:
-    F. y = x^3 - 6x^2 + 11x - 6
-    G. y = sin(x) - x^2
-    """
 def resuelve_ecuacion(x, ecuacion_id):
-    """Calcula el valor de y basado en la ecuación seleccionada."""
     if ecuacion_id == "f":
         return x**3 - 6*x**2 + 11*x - 6
     elif ecuacion_id == "g":
@@ -24,7 +14,6 @@ def imprime_tabla(list_x, list_y):
         print(f" | {list_x[i]:^10.4f} | {list_y[i]:^10.4f} |")
 
 def generar_x(xi, xf, incx):
-    """Genera la lista de valores de x respetando el incremento."""
     valores_x = []
     actual = xi
     while actual <= xf:
@@ -66,4 +55,5 @@ def tabula():
     print(f"Mínimo Y: {min_y:.4f}")
     
     return min_y, max_y
+
 
