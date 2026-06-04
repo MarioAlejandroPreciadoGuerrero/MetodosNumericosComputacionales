@@ -6,14 +6,14 @@ import math as m
 3. Se tabula la ecuacion con los valores de x e y
 4. Se imprime la tabla de valores
     Ecuaciones a resolver:
-    1. y = x^3 - 6x^2 + 11x - 6
-    2. y = sin(x) - x^2
+    F. y = x^3 - 6x^2 + 11x - 6
+    G. y = sin(x) - x^2
     """
 def resuelve_ecuacion(x, ecuacion_id):
     """Calcula el valor de y basado en la ecuación seleccionada."""
-    if ecuacion_id == 1:
+    if ecuacion_id == "f":
         return x**3 - 6*x**2 + 11*x - 6
-    elif ecuacion_id == 2:
+    elif ecuacion_id == "g":
         return m.sin(m.radians(x)) - x**2
     return 0
 
@@ -37,7 +37,7 @@ def tabula():
         xi = float(input("Ingrese el inicio del intervalo (xi): "))
         xf = float(input("Ingrese el final del intervalo (xf): "))
         incx = float(input("Ingrese el incremento (incx): "))
-        ecuacion_id = int(input("Seleccione ecuación (1 o 2): "))
+        ecuacion_id = input("Seleccione ecuación (f o g): ")
     except ValueError:
         print("Error: Por favor ingrese solo números.")
         return
